@@ -14,7 +14,7 @@ useCase:
 
 # User Picture
 
-Auth0 [normalizes](/user-profile/normalized) common profile properties in the User Profile, this includes the `name` and `picture` field and more. The picture field is populated by either the social provider profile picture or the Gravatar image associated with the user's email address. By default all database users will have a placeholder image with their initials. When you authenticate the user, this picture field is referred by as `user.picture`.
+Auth0 [normalizes](/user-profile/normalized) common profile properties in the User Profile, this includes the `name` and `picture` field and more. The picture field is populated by either the social provider profile picture or the Gravatar image associated with the user's email address. By default all database users will have a placeholder image with their initials. The initials are pulled automatically and cannot be updated. When you authenticate the user, this picture field is referred by as `user.picture`.
 
 ![User Picture](/media/articles/user-profile/user-picture.png)
 
