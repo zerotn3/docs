@@ -179,6 +179,10 @@ When Auth0 is acting as a [SAML Identity Provider](/protocols/saml/saml-idp-gene
 
 #### Single Logout Scenario
 
+::: note
+Single Logout only occurs when a Service Provider initiates the logout. If Auth0 as a SAML IdP initiates a logout by calling `https://${account.namespace}/v2/logout`, the Service Providers will not be notified.
+:::
+
 If your Service Provider supports SAML Single Logout, you will need to configure the Service Provider to call `https://${account.namespace}/samlp/CLIENT_ID/logout` (also listed in the SAML IdP Metadata). When a logout request is triggered by the Service Provider, a logout request will be sent to this endpoint and Auth0 starts the SAML SLO flow by notifying the existing session participants using a frontend channel.
 
 * To prevent a session participant from being notified, you can set `logout.slo_enabled` to `false` in the `SAML2 Web App` application addon's settings. 
