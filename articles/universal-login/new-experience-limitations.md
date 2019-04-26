@@ -10,8 +10,6 @@ toc: true
 
 The New Universal Login Experience currently has these limitations:
 
-- It hasn't been localized, so it's only rendered in English.
-
 - If you customize the HTML of any of the Universal Login pages, you will get pages that behave like the Classic Experience. There's no way to tweak the content of the new pages.
 
 - [Home Realm Discovery](/libraries/lock/v11/selecting-the-connection-for-multiple-logins) is not available. This would allow users to login with their corporate email addresses and be redirected to their enterprise's login pages. The current implementation will add a button for each enterprise connection. This makes it not suitable for this scenario which is very common for B2B customers.
@@ -24,6 +22,3 @@ The New Universal Login Experience currently has these limitations:
 
 - [MFA Enrollment Tickets](/multifactor-authentication/developer/custom-enrollment-ticket) will keep using the Classic Experience even when the New Experience is enabled.
 
-## Known Bugs
-
-- If you specify the name of a Database Connection in the `connection` parameter to  `/authorize`, the login page will also show the enabled social connections.
